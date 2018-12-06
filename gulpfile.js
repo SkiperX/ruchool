@@ -102,7 +102,7 @@ gulp.task('mainJs:build', function () {
 gulp.task('vendorsJs:build', function () {
     gulp.src(path.src.vendorsJs)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        .pipe(rigger())
+        // .pipe(rigger())
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(browserSync.stream());
